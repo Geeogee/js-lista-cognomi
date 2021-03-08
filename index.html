@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordered list of surnames</title>
+</head>
+<body>
+    <script>
+
+        var surnames = ["Rossi", "Gialli", "Verdi", "Arancioni"];
+        var userSurname = prompt("Add your surname");
+        
+        surnames.push(userSurname);
+        surnames.sort();
+
+        for(i=0; i<surnames.length; i++) {
+            console.log((i+1) + "° Cognome: " + surnames[i]);
+            if(surnames[i] == userSurname) {
+                var position = i+1;
+            }
+        }
+
+        console.log("Il tuo cognome è in posizione: " + position);
+
+    </script>
+</body>
+</html>
